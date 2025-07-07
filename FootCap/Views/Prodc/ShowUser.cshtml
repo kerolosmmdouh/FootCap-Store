@@ -1,0 +1,212 @@
+﻿@model IEnumerable<FootCap.Models.Product>
+
+@{
+    ViewData["Title"] = "Product Grid";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .product-grid-container {
+        padding: 30px 15px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .product-card-adidas {
+        position: relative;
+        background: white;
+        border: none;
+        border-radius: 4px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+        text-align: center;
+    }
+
+        .product-card-adidas:hover {
+            transform: translateY(-5px);
+        }
+
+    .image-container {
+        background: #f0f0f0c9;
+        padding: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 232px;
+    }
+
+    .product-image {
+        max-width: 100%;
+        max-height: 226px;
+        object-fit: contain;
+    }
+
+    .card-content {
+        padding: 20px;
+        flex-grow: 1;
+    }
+
+    .product-name {
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 8px;
+        line-height: 1.4;
+    }
+
+    .product-description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+
+    .product-price {
+        font-size: 18px;
+        font-weight: 700;
+        color: hsl(5, 100%, 69%);
+        margin-bottom: 5px;
+    }
+
+    .product-stock {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .card-icons {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        display: flex;
+        gap: 12px;
+        font-size: 1.3em;
+        color: #666;
+        z-index: 10;
+        pointer-events: auto;
+        padding: 5px 10px;
+    }
+
+        .card-icons i:hover {
+            color: hsl(5, 100%, 69%);
+            transform: none;
+            cursor: pointer;
+        }
+</style>
+
+<div class="product-grid-container">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+        @foreach (var product in Model)
+        {
+            <div class="col">
+                <div class="product-card-adidas" data-category="@product.Category.Name">
+
+                    <div class="card-icons">
+                        <a asp-controller="Cart" asp-action="AddToCart" asp-route-id="@product.ProductId"
+                           onclick="addToCartAndRedirect(event, @product.ProductId)"
+                           title="Add to Cart"
+                           style="color: inherit; text-decoration: none;">
+                            <i class='bx bx-cart-alt'></i>
+                        </a>
+                        <a href="#" onclick="addToFavorites(event, @product.ProductId)" title="Add to Favorites" style="color: inherit; text-decoration: none;">
+                            <i class='bx bx-heart'></i>
+                        </a>
+                    </div>
+                    <div class="image-container">
+                        <img src="@product.ImageUrl" class="product-image" alt="@product.Name" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="product-name">@product.Name</h5>
+                        <p class="product-description">@product.Description</p>
+                        <p class="product-price">@product.Price.ToString("0.00") EGP</p>
+                        <p class="product-stock">@product.QuantityInStock in stock</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    function addToCartAndRedirect(event, productId) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Add to cart via AJAX
+        $.post('/Cart/AddToCart', { id: productId })
+            .done(function() {
+                // Redirect immediately to ShowCart page
+                window.location.href = '/Cart/ShowCart';
+            })
+            .fail(function() {
+                // Only show error message if needed
+                alert('Error adding product to cart');
+            });
+    }
+
+    function addToFavorites(event, productId) {
+        event.preventDefault();
+
+        $.ajax({
+            url: '/Favorite/AddToFavorite',
+            type: 'POST',
+            headers: {
+                "RequestVerificationToken": $('input[name="__RequestVerificationToken"]').val()
+            },
+            data: { productId: productId },
+            success: function(response) {
+                if (response.success) {
+                    // Change heart color when added
+                    $(event.target).find('i').css('color', 'red');
+                    alert(response.message);
+                } else {
+                    alert(response.message);
+                    if (response.redirectUrl) {
+                        window.location.href = response.redirectUrl;
+                    }
+                }
+            },
+            error: function() {
+                alert('Error adding to favorites');
+            }
+        });
+    }
+
+   
+    document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const productCards = document.querySelectorAll(".product-card-adidas");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", function (e) {
+                e.preventDefault();
+                const filter = this.dataset.filter;
+
+                // إزالة active من كل الأزرار وإضافة على الزر الحالي
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                this.classList.add("active");
+
+                productCards.forEach(card => {
+                    const category = card.dataset.category;
+                    if (filter === "All" || category === filter) {
+                        card.parentElement.style.display = "block"; // عرض الكرت
+                    } else {
+                        card.parentElement.style.display = "none"; // إخفاؤه
+                    }
+                });
+            });
+        });
+    });
+</script>
+

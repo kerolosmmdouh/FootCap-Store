@@ -1,0 +1,148 @@
+﻿@model IEnumerable<FootCap.Models.CartItem>
+
+@{
+    ViewData["Title"] = "Your Cart";
+    Layout = null;
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+    .product-image {
+        max-height: 180px;
+        object-fit: contain;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .back-btn {
+        margin-bottom: 20px;
+    }
+
+    .cart-summary {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 30px;
+    }
+</style>
+
+<div class="container py-5">
+    <a href="javascript:history.back()" class="btn btn-outline-secondary back-btn">
+        <i class="bi bi-arrow-left"></i> Back to Shopping
+    </a>
+
+    <h2 class="text-center mb-4">Your Shopping Cart</h2>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center">
+            <h3>Your cart is empty.</h3>
+            <p>Please add some products to your cart.</p>
+            <a href="/" class="btn btn-primary">Continue Shopping</a>
+        </div>
+    }
+    else
+    {
+        <div class="row g-4 justify-content-center">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card p-3 h-100 d-flex flex-column justify-content-between">
+                        <img src="@item.Product.ImageUrl" alt="@item.Product.Name" class="product-image" />
+                        <h5 class="card-title">@item.Product.Name</h5>
+                        <p>Unit Price: @item.Product.Price.ToString("0.00") EGP</p>
+                        <p>In Stock: @item.Product.QuantityInStock</p>
+
+                        <form asp-action="ConfirmOrder" asp-controller="Order" method="post" class="mb-3">
+                            <input type="hidden" name="ProductId" value="@item.ProductId" />
+
+                            <div class="input-group mb-2">
+                                <label class="input-group-text" for="Quantity_@item.ProductId">Qty</label>
+                                <input type="number" id="Quantity_@item.ProductId" name="Quantity"
+                                       min="1" max="@item.Product.QuantityInStock"
+                                       value="@item.Quantity" class="form-control quantity-input"
+                                       data-product-id="@item.ProductId"
+                                       data-unit-price="@item.Product.Price"
+                                       onchange="updateCartItem(this)" required />
+                            </div>
+
+                            <p>Total Price: <strong><span id="totalPrice_@item.ProductId">@((item.Product.Price * item.Quantity).ToString("0.00"))</span> EGP</strong></p>
+
+                            <button type="submit" class="btn btn-success w-100 mb-2">
+                                <i class="bi bi-check-circle"></i> Confirm Order
+                            </button>
+                        </form>
+
+                        <form asp-action="RemoveFromCart" asp-controller="Cart" method="post" class="mt-auto">
+                            <input type="hidden" name="ProductId" value="@item.ProductId" />
+                            <button type="submit" class="btn btn-danger w-100">
+                                <i class="bi bi-trash"></i> Remove
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="cart-summary">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Cart Summary</h4>
+                    <p>Total Items: <span id="totalItems">@Model.Sum(item => item.Quantity)</span></p>
+                    <p>Grand Total: <strong><span id="grandTotal">@Model.Sum(item => item.Product.Price * item.Quantity).ToString("0.00")</span> EGP</strong></p>
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-end">
+                    <a href="/" class="btn btn-primary me-2">
+                        <i class="bi bi-cart-plus"></i> Continue Shopping
+                    </a>
+                    <a href="@Url.Action("Checkout", "Order")" class="btn btn-success">
+                        <i class="bi bi-credit-card"></i> Proceed to Checkout
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<script>
+    function updateCartItem(inputElement) {
+        const productId = inputElement.getAttribute('data-product-id');
+        const unitPrice = parseFloat(inputElement.getAttribute('data-unit-price'));
+        let quantity = parseInt(inputElement.value);
+        const maxQuantity = parseInt(inputElement.max);
+
+        if (quantity > maxQuantity) {
+            alert(`Sorry, we only have ${maxQuantity} items available.`);
+            inputElement.value = maxQuantity;
+            quantity = maxQuantity;
+        } else if (quantity < 1) {
+            alert('Quantity cannot be less than 1.');
+            inputElement.value = 1;
+            quantity = 1;
+        }
+
+        const totalPrice = (unitPrice * quantity).toFixed(2);
+        document.getElementById(`totalPrice_${productId}`).textContent = totalPrice;
+
+        updateGrandTotal();
+    }
+
+    function updateGrandTotal() {
+        let totalItems = 0;
+        let grandTotal = 0;
+
+        document.querySelectorAll('.quantity-input').forEach(input => {
+            const quantity = parseInt(input.value);
+            const unitPrice = parseFloat(input.getAttribute('data-unit-price'));
+
+            totalItems += quantity;
+            grandTotal += unitPrice * quantity;
+        });
+
+        document.getElementById('totalItems').textContent = totalItems;
+        document.getElementById('grandTotal').textContent = grandTotal.toFixed(2);
+    }
+</script>

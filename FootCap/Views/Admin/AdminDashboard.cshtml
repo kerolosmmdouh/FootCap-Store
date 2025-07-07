@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = null; 
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">👑 Admin Dashboard</h2>
+
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-10">
+            <div class="row g-4 justify-content-center text-center">
+                <div class="col-md-4">
+                    <div class="card text-white bg-primary h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Total Users</h5>
+                            <p class="card-text fs-3">@ViewBag.TotalUsers</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a asp-controller="Admin" asp-action="Users" class="text-white text-decoration-none">👤 View All Users</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-white bg-success h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Products</h5>
+                            <p class="card-text fs-3">@ViewBag.TotalProducts</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a asp-controller="Prodc" asp-action="Index" class="text-white text-decoration-none">🛍️ Manage Products</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-white bg-warning h-100 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Orders</h5>
+                            <p class="card-text fs-3">@ViewBag.TotalOrders</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a asp-controller="Admin" asp-action="Orders" class="text-white text-decoration-none">📦 View Orders</a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> 
+    
+    <div class="text-center mb-5">
+        <a asp-controller="prodc" asp-action="showuser" class="btn btn-outline-primary btn-lg rounded-pill px-5">
+            🏠 Home
+        </a>
+    </div>
+</div>
+
+

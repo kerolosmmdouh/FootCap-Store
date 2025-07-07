@@ -1,0 +1,457 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FootCap.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FootCap.cybk4qc6le.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\css\\styel.css",
+      "PackagePath": "staticwebassets\\css\\styel.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\WhatsApp Image 2025-05-20 at 15.48.54_5a5043c820250630111842616.jpg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2025-05-20 at 15.48.54_5a5043c820250630111842616.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\collection-1.jpg",
+      "PackagePath": "staticwebassets\\images\\collection-1.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\collection-2.jpg",
+      "PackagePath": "staticwebassets\\images\\collection-2.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\collection-3.jpg",
+      "PackagePath": "staticwebassets\\images\\collection-3.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\cta-1.jpg",
+      "PackagePath": "staticwebassets\\images\\cta-1.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\cta-2.jpg",
+      "PackagePath": "staticwebassets\\images\\cta-2.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\favicon.svg",
+      "PackagePath": "staticwebassets\\images\\favicon.svg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\hero-banner.png",
+      "PackagePath": "staticwebassets\\images\\hero-banner.png"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\insta-1.jpg",
+      "PackagePath": "staticwebassets\\images\\insta-1.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\insta-2.jpg",
+      "PackagePath": "staticwebassets\\images\\insta-2.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\insta-220250630144506029.jpg",
+      "PackagePath": "staticwebassets\\images\\insta-220250630144506029.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\insta-3.jpg",
+      "PackagePath": "staticwebassets\\images\\insta-3.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\insta-4.jpg",
+      "PackagePath": "staticwebassets\\images\\insta-4.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\insta-5.jpg",
+      "PackagePath": "staticwebassets\\images\\insta-5.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\insta-6.jpg",
+      "PackagePath": "staticwebassets\\images\\insta-6.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\insta-7.jpg",
+      "PackagePath": "staticwebassets\\images\\insta-7.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\insta-8.jpg",
+      "PackagePath": "staticwebassets\\images\\insta-8.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\logo.svg",
+      "PackagePath": "staticwebassets\\images\\logo.svg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-1.jpg",
+      "PackagePath": "staticwebassets\\images\\product-1.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-120250630175243421.jpg",
+      "PackagePath": "staticwebassets\\images\\product-120250630175243421.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-2.jpg",
+      "PackagePath": "staticwebassets\\images\\product-2.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-220250630143747256.jpg",
+      "PackagePath": "staticwebassets\\images\\product-220250630143747256.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-220250630175344684.jpg",
+      "PackagePath": "staticwebassets\\images\\product-220250630175344684.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-3.jpg",
+      "PackagePath": "staticwebassets\\images\\product-3.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-320250630175438718.jpg",
+      "PackagePath": "staticwebassets\\images\\product-320250630175438718.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-4.jpg",
+      "PackagePath": "staticwebassets\\images\\product-4.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-420250630175515900.jpg",
+      "PackagePath": "staticwebassets\\images\\product-420250630175515900.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-5.jpg",
+      "PackagePath": "staticwebassets\\images\\product-5.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-520250630175606141.jpg",
+      "PackagePath": "staticwebassets\\images\\product-520250630175606141.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-6.jpg",
+      "PackagePath": "staticwebassets\\images\\product-6.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-620250630175702744.jpg",
+      "PackagePath": "staticwebassets\\images\\product-620250630175702744.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-7.jpg",
+      "PackagePath": "staticwebassets\\images\\product-7.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-720250630175737724.jpg",
+      "PackagePath": "staticwebassets\\images\\product-720250630175737724.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-8.jpg",
+      "PackagePath": "staticwebassets\\images\\product-8.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\product-820250630175812246.jpg",
+      "PackagePath": "staticwebassets\\images\\product-820250630175812246.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\service-1.png",
+      "PackagePath": "staticwebassets\\images\\service-1.png"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\service-2.png",
+      "PackagePath": "staticwebassets\\images\\service-2.png"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\service-3.png",
+      "PackagePath": "staticwebassets\\images\\service-3.png"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\service-4.png",
+      "PackagePath": "staticwebassets\\images\\service-4.png"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\special-banner.jpg",
+      "PackagePath": "staticwebassets\\images\\special-banner.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\sponsor-1.png",
+      "PackagePath": "staticwebassets\\images\\sponsor-1.png"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\sponsor-2.png",
+      "PackagePath": "staticwebassets\\images\\sponsor-2.png"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\sponsor-3.png",
+      "PackagePath": "staticwebassets\\images\\sponsor-3.png"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\sponsor-4.png",
+      "PackagePath": "staticwebassets\\images\\sponsor-4.png"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\images\\sponsor-5.png",
+      "PackagePath": "staticwebassets\\images\\sponsor-5.png"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\project Iti\\FootCap\\FootCap\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FootCap.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FootCap.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.FootCap.props",
+      "PackagePath": "build\\FootCap.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.FootCap.props",
+      "PackagePath": "buildMultiTargeting\\FootCap.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.FootCap.props",
+      "PackagePath": "buildTransitive\\FootCap.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

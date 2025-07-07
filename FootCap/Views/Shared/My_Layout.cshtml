@@ -1,0 +1,205 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="~/css/styel.css" asp-append-version="true" />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <title>FootCap</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="nav-bar">
+        <a href="#" class="logo">
+            <img src="~/images/logo.svg" alt="Logo" loading="lazy" asp-append-version="true" />
+        </a>
+        <div class="nav-links-desktop">
+            <ul>
+                <li><a href="#" class="home">Home</a></li>
+                
+                <li><a href="#lastSection" class="produc">Products</a></li>
+                <li><a asp-controller="Cart" asp-action="ShowCart" class="shop">Shop</a></li>
+
+                <li><a href="#overlay" class="blog">Blog</a></li>
+                <li><a href="#footer" class="about">About</a></li>
+              
+            </ul>
+        </div>
+        <div class="menu-icon"><i class='bx bx-menu'></i></div>
+        <div class="search-and-icons">
+           
+            <div class="icons" style="display: flex; align-items: center; gap: 15px;">
+
+                <a asp-controller="Favorite" asp-action="ShowFavorites" class="cart-link">
+                    <i class="bx bx-heart"></i>
+                </a>
+               
+                <a asp-controller="Cart" asp-action="ShowCart" class="cart-link">
+                    <i class='bx bx-shopping-bag'></i>
+                </a>
+
+
+                
+                
+                    <form asp-controller="Account" asp-action="Logout" method="post" style="display:inline;">
+                        <button type="submit" class="logout-button" style="background:none; border:none; cursor:pointer; color:#000;">
+                            <i class='bx bx-log-out'></i>
+                        </button>
+                    </form>
+                
+             
+            </div>
+        </div>
+    </header>
+
+
+
+    
+    <div class="sidebar-menu" >
+        <div class="sidebar-header">
+            <a href="#" class="logo">
+                <img src="~/images/logo.svg" alt="Footcap Logo" asp-append-version="true" />
+            </a>
+            <div class="close-menu-icon"><i class='bx bx-x'></i></div>
+        </div>
+        <div class="nav-links-sidebar">
+            <ul>
+                <li><a href="#" class="home">Home</a></li>
+               
+                <li><a href="#lastSection" class="produc">Products</a></li>
+                <li><a href="#" class="shop">Shop</a></li>
+                <li><a href="#overlay" class="blog">Blog</a></li>
+                <li><a href="#footer" class="about">About</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-account-info">
+            <ul>
+                <li><a href="#"><i class='bx bx-user'></i> Login / Register</a></li>
+                <li><a href="#"><i class='bx bx-heart'></i> Wishlist <span class="badge">5</span></a></li>
+                <li><a href="#"><i class='bx bx-shopping-bag'></i> Basket: <span class="price">$318.00</span><span class="badge">4</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+   
+    
+    <div class="overlay" ></div>
+
+
+  
+    <div class="content" >
+        <div class="text-content">
+            <h1>New Summer</h1>
+            <h2>Shoes Collection</h2>
+            <p>
+                Competently expedite alternative benefits whereas leading- <br>
+                edge catalysts for change. Globally leverage existing an <br>
+                expanded array of leadership.
+            </p>
+            
+            <a href="#lastSection">Shop Now →</a>
+
+
+        </div>
+    </div>
+
+    <div class="container-proudect" id="overlay">
+        <div class="item-proudect" style="background-image: url('/images/collection-1.jpg');">
+            <h1>MEN COLLECTIONS</h1>
+            <button>Explore All →</button>
+        </div>
+        <div class="item-proudect2" style="background-image: url('/images/collection-2.jpg');">
+            <h1>MEN COLLECTIONS</h1>
+            <button>Explore All →</button>
+        </div>
+        <div class="item-proudect3" style="background-image: url('/images/collection-3.jpg');">
+            <h1>MEN COLLECTIONS</h1>
+            <button>Explore All →</button>
+        </div>
+    </div>
+
+
+    <div class="products-titel">
+        <h2>Bestsellers Products</h2>
+    </div>
+
+    <div class="product-name">
+        
+            <ul>
+                <li><a href="#" class="filter-btn active" data-filter="All">All</a></li>
+                <li><a href="#" class="filter-btn" data-filter="Nike">Nike</a></li>
+                <li><a href="#" class="filter-btn" data-filter="Adidas">Adidas</a></li>
+                <li><a href="#" class="filter-btn" data-filter="Puma">Puma</a></li>
+            
+                <li><a href="#" class="filter-btn" data-filter="Apex">Apex</a></li>
+           
+
+        </ul>
+    </div>
+
+    <!-- Dynamic Page Content -->
+    <main class="ContrntRender" id="lastSection">
+        @RenderBody()
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-section about-us">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+            <div class="footer-section contact-info" id="footer">
+                <h3>Contact Info</h3>
+                <p><i class='bx bx-map'></i> 27 Division St, New York, NY 10002, USA</p>
+                <p><i class='bx bx-phone'></i> +1 234 567 8900</p>
+                <p><i class='bx bx-envelope'></i> info@example.com</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email Address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 FootCap. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/main.js" asp-append-version="true"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿@model FootCap.Models.Product
+
+@{
+    ViewData["Title"] = "Edit Product";
+    Layout = null;
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+<div class="container py-5">
+    <h2 class="text-center mb-5 text-primary fw-bold">✏️ Edit Product</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">📝 Product Information</h5>
+                </div>
+                <div class="card-body bg-light">
+                    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+                        <input type="hidden" asp-for="ProductId" />
+
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label fw-semibold">Product Name</label>
+                            <input asp-for="Name" class="form-control" placeholder="e.g., Nike Air Zoom" />
+                            <span asp-validation-for="Name" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Description" class="form-label fw-semibold">Description</label>
+                            <textarea asp-for="Description" class="form-control" rows="3" placeholder="Enter product description..."></textarea>
+                            <span asp-validation-for="Description" class="text-danger small"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Price" class="form-label fw-semibold">Price (EGP)</label>
+                                <input asp-for="Price" class="form-control" type="number" step="0.01" placeholder="0.00" />
+                                <span asp-validation-for="Price" class="text-danger small"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="QuantityInStock" class="form-label fw-semibold">Available Quantity</label>
+                                <input asp-for="QuantityInStock" class="form-control" type="number" placeholder="0" min="1" />
+                                <span asp-validation-for="QuantityInStock" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="CategoryId" class="form-label fw-semibold">Category</label>
+                            <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-select">
+                                <option value="">-- Select Category --</option>
+                            </select>
+                            <span asp-validation-for="CategoryId" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ImageFile" class="form-label fw-semibold">Change Product Image</label>
+                            <input asp-for="ImageFile" class="form-control" type="file" accept="image/*" />
+                            <span asp-validation-for="ImageFile" class="text-danger small"></span>
+                        </div>
+
+                        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                        {
+                            <div class="mb-3">
+                                <label class="form-label">Current Image</label><br />
+                                <img src="@Model.ImageUrl" alt="Product Image" style="max-height: 150px;" class="rounded border" />
+                            </div>
+                        }
+
+                        <div class="text-center mb-4">
+                            <button type="submit" class="btn btn-success px-5 shadow">
+                                <i class="bi bi-check-circle me-1"></i> Save Changes
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Back Button -->
+                    <div class="text-center">
+                        <a asp-action="Index" class="btn btn-secondary px-4">
+                            ← Back to Product List
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
