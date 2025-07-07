@@ -36,7 +36,5 @@ FootCap is a responsive full stack e-commerce web application for managing and s
 - 💬 Bootstrap Alert Cards for Notifications
 - 📱 Fully Responsive UI
 
----
 
-## 📁 Project Structure
 
