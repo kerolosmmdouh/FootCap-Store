@@ -36,4 +36,40 @@ FootCap is a responsive full stack e-commerce web application for managing and s
 - 💬 Bootstrap Alert Cards for Notifications
 - 📱 Fully Responsive UI
 
+## 📁 Project Structure
+
+```plaintext
+FootCap/
+│
+├── Controllers/          # Contains MVC controllers handling user requests and app logic
+│   ├── AccountController.cs
+│   ├── CartController.cs
+│   ├── OrderController.cs
+│   └── ProdcController.cs
+│
+├── Models/               # Contains entity classes representing data models
+│   ├── Product.cs
+│   ├── Category.cs
+│   ├── Cart.cs
+│   ├── CartItem.cs
+│   ├── Order.cs
+│   └── OrderItem.cs
+│
+├── Views/                # Razor views for UI pages organized by feature
+│   ├── Cart/
+│   ├── Order/
+│   ├── Account/
+│   ├── Prodc/
+│   └── Shared/
+│
+├── wwwroot/              # Static files (CSS, JavaScript, images)
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── Data/                 # Database context and migrations
+│   └── Context.cs
+│
+├── appsettings.json      # Configuration file including DB connection strings
+└── Program.cs            # Application startup and configuration
 
