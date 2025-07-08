@@ -26,31 +26,40 @@ FootCap is a responsive full stack e-commerce web application for managing and s
 
 ## 🚀 Features
 
-- 🧑‍💼 User Registration & Login
-- 🔐 Identity Roles: `Admin` and `User`
-- 📦 Browse Products by Category (Nike, Adidas, etc.)
-- 🛒 Add to Cart with Quantity Control
-- ✅ Confirm Orders with Live Stock Deduction
-- 📉 Stock Management After Orders
-- 🗑 Remove Items from Cart
-- 💬 Bootstrap Alert Cards for Notifications
-- 📱 Fully Responsive UI
-🎯 Design Principles
-This project follows the SOLID principles of object-oriented design to ensure a clean, maintainable, and scalable codebase. Applying these principles helps in creating software that is easier to understand, test, and extend.
+- 🧑‍💼 User Registration & Login  
+- 🔐 Identity Roles: `Admin` and `User`  
+- 📦 Browse Products by Category (Nike, Adidas, etc.)  
+- 🛒 Add to Cart with Quantity Control  
+- ✅ Confirm Orders with Live Stock Deduction  
+- 📉 Stock Management After Orders  
+- 🗑 Remove Items from Cart  
+- 💬 Bootstrap Alert Cards for Notifications  
+- 📱 Fully Responsive UI  
 
-Single Responsibility Principle (SRP): Each class and module has one clear responsibility, which simplifies debugging and future changes.
+---
 
-Open/Closed Principle (OCP): The system is open for extension but closed for modification, allowing new features to be added without changing existing code.
+## 🎯 Design Principles
 
-Liskov Substitution Principle (LSP): Derived classes can be used interchangeably with their base classes without affecting the correctness of the program.
+This project follows the **SOLID principles** of object-oriented design to ensure a clean, maintainable, and scalable codebase. Applying these principles helps in creating software that is easier to understand, test, and extend.
 
-Interface Segregation Principle (ISP): Clients are provided with specific interfaces rather than a single general-purpose interface, promoting decoupling.
+- **Single Responsibility Principle (SRP):**  
+  Each class and module has one clear responsibility, which simplifies debugging and future changes.
 
-Dependency Inversion Principle (DIP): High-level modules depend on abstractions rather than concrete implementations, enhancing flexibility and testability.
+- **Open/Closed Principle (OCP):**  
+  The system is open for extension but closed for modification, allowing new features to be added without changing existing code.
+
+- **Liskov Substitution Principle (LSP):**  
+  Derived classes can be used interchangeably with their base classes without affecting the correctness of the program.
+
+- **Interface Segregation Principle (ISP):**  
+  Clients are provided with specific interfaces rather than a single general-purpose interface, promoting decoupling.
+
+- **Dependency Inversion Principle (DIP):**  
+  High-level modules depend on abstractions rather than concrete implementations, enhancing flexibility and testability.
 
 By adhering to these principles, the FootCap application achieves a modular architecture that supports ongoing development and maintenance with minimal risk of regression.
 
-
+---
 
 ## 📁 Project Structure
 
@@ -88,4 +97,3 @@ FootCap/
 │
 ├── appsettings.json      # Configuration file including DB connection strings
 └── Program.cs            # Application startup and configuration
-
