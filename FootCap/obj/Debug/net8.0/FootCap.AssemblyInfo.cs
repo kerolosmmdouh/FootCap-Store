@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FootCap")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82260edb6523fa05268ea8311450ba5b77263d49")]
 [assembly: System.Reflection.AssemblyProductAttribute("FootCap")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FootCap")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

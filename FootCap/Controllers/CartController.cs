@@ -1,125 +1,91 @@
 ﻿using FootCap.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace FootCap.Controllers
 {
     public class CartController : Controller
     {
-        private readonly Context _context;
-
+        private readonly ICartRepository _cartRepo;
         private readonly UserManager<User> _userManager;
 
-        public CartController(Context context, UserManager<User> userManager)
+        public CartController(ICartRepository cartRepo, UserManager<User> userManager)
         {
-            _context = context;
+            _cartRepo = cartRepo;
             _userManager = userManager;
         }
 
-
-        // ✅ إضافة منتج إلى السلة
-        public IActionResult AddToCart(int id)
+        public async Task<IActionResult> AddToCart(int id)
         {
-            var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
+            var product = await _cartRepo.GetProductByIdAsync(id);
             if (product == null)
                 return NotFound();
 
-            string userId = _userManager.GetUserId(User);
-
-            var cart = _context.Carts.FirstOrDefault(c => c.UserId == userId);
+            var userId = _userManager.GetUserId(User);
+            var cart = await _cartRepo.GetCartByUserIdAsync(userId);
             if (cart == null)
             {
                 cart = new Cart { UserId = userId };
-                _context.Carts.Add(cart);
-                _context.SaveChanges();
+                await _cartRepo.AddCart(cart);
+                await _cartRepo.SaveChangesAsync();
             }
 
-            // ✅ Check لو المنتج موجود بالفعل في السلة
-            var existingItem = _context.CartItems.FirstOrDefault(ci => ci.CartId == cart.CartId && ci.ProductId == id);
+            var existingItem = await _cartRepo.GetCartItemAsync(cart.CartId, id);
             if (existingItem != null)
-            {
-              
                 return RedirectToAction("showUser", "Prodc");
-            }
 
-            // ✅ Add جديد لو مش موجود
             var cartItem = new CartItem
             {
                 CartId = cart.CartId,
                 ProductId = id,
                 Quantity = 1
             };
-            _context.CartItems.Add(cartItem);
-            _context.SaveChanges();
+            await _cartRepo.AddCartItem(cartItem);
+            await _cartRepo.SaveChangesAsync();
 
-            
             return RedirectToAction("showUser", "Prodc");
         }
 
-
-      
-        public IActionResult ShowCart()
+        public async Task<IActionResult> ShowCart()
         {
-            string userId = _userManager.GetUserId(User);
-
-
-            var cart = _context.Carts.FirstOrDefault(c => c.UserId == userId);
+            var userId = _userManager.GetUserId(User);
+            var cart = await _cartRepo.GetCartByUserIdAsync(userId);
             if (cart == null)
-            {
                 return View(new List<CartItem>());
-            }
 
-            var cartItems = _context.CartItems
-                .Where(ci => ci.CartId == cart.CartId)
-                .Include(ci => ci.Product)
-                .ToList();
-
+            var cartItems = await _cartRepo.GetCartItemsWithProductsAsync(cart.CartId);
             return View(cartItems);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult RemoveFromCart(int ProductId)
+        public async Task<IActionResult> RemoveFromCart(int ProductId)
         {
-            
             var userId = _userManager.GetUserId(User);
             if (userId == null)
-            {
-             
                 return RedirectToAction("Login", "Account");
-            }
 
-
-            var cart = _context.Carts.FirstOrDefault(c => c.UserId == userId);
+            var cart = await _cartRepo.GetCartByUserIdAsync(userId);
             if (cart == null)
-            {
-              
                 return RedirectToAction("ShowCart");
-            }
 
-       
-            var cartItem = _context.CartItems
-                .Include(ci => ci.Product)
-                .FirstOrDefault(ci => ci.CartId == cart.CartId && ci.ProductId == ProductId);
-
+            var cartItem = await _cartRepo.GetCartItemAsync(cart.CartId, ProductId);
             if (cartItem == null)
             {
                 TempData["Error"] = "Item not found in your cart";
                 return RedirectToAction("ShowCart");
             }
 
-           
             try
             {
-                _context.CartItems.Remove(cartItem);
-                _context.SaveChanges();
-               
+                await _cartRepo.RemoveCartItem(cartItem);
+                await _cartRepo.SaveChangesAsync();
             }
-            catch (Exception ex)
+            catch
             {
                 TempData["Error"] = "Error occurred while removing item from cart";
-                
             }
 
             return RedirectToAction("ShowCart");
@@ -127,26 +93,25 @@ namespace FootCap.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult ToggleCart(int ProductId)
+        public async Task<IActionResult> ToggleCart(int ProductId)
         {
             var userId = _userManager.GetUserId(User);
             if (userId == null)
                 return RedirectToAction("Login", "Account");
 
-            var cart = _context.Carts.FirstOrDefault(c => c.UserId == userId);
+            var cart = await _cartRepo.GetCartByUserIdAsync(userId);
             if (cart == null)
             {
                 cart = new Cart { UserId = userId };
-                _context.Carts.Add(cart);
-                _context.SaveChanges();
+                await _cartRepo.AddCart(cart);
+                await _cartRepo.SaveChangesAsync();
             }
 
-            var existingItem = _context.CartItems.FirstOrDefault(ci => ci.CartId == cart.CartId && ci.ProductId == ProductId);
+            var existingItem = await _cartRepo.GetCartItemAsync(cart.CartId, ProductId);
             if (existingItem != null)
             {
-                _context.CartItems.Remove(existingItem);
-                _context.SaveChanges();
-     
+                await _cartRepo.RemoveCartItem(existingItem);
+                await _cartRepo.SaveChangesAsync();
             }
             else
             {
@@ -156,12 +121,11 @@ namespace FootCap.Controllers
                     ProductId = ProductId,
                     Quantity = 1
                 };
-                _context.CartItems.Add(cartItem);
-                _context.SaveChanges();
+                await _cartRepo.AddCartItem(cartItem);
+                await _cartRepo.SaveChangesAsync();
             }
 
             return RedirectToAction("showUser", "Prodc");
         }
-
     }
 }

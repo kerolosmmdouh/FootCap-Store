@@ -257,3 +257,4 @@ D:\Programming\project Iti\FootCap\FootCap\bin\Debug\net8.0\runtimes\win\lib\net
 D:\Programming\project Iti\FootCap\FootCap\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 D:\Programming\project Iti\FootCap\FootCap\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\Programming\project Iti\FootCap\FootCap\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\Programming\project Iti\FootCap\FootCap\obj\Debug\net8.0\FootCap.sourcelink.json

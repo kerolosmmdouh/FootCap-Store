@@ -2,76 +2,49 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace FootCap.Controllers
+[Authorize]
+public class FavoriteController : Controller
 {
-    [Authorize]
-    public class FavoriteController : Controller
+    private readonly IFavoriteRepository _favoriteRepo;
+    private readonly UserManager<User> _userManager;
+
+    public FavoriteController(IFavoriteRepository favoriteRepo, UserManager<User> userManager)
     {
-        private readonly Context _context;
-        private readonly UserManager<User> _userManager;
+        _favoriteRepo = favoriteRepo;
+        _userManager = userManager;
+    }
 
-        public FavoriteController(Context context, UserManager<User> userManager)
-        {
-            _context = context;
-            _userManager = userManager;
-        }
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> AddToFavorite(int productId)
+    {
+        var user = await _userManager.GetUserAsync(User);
+        if (user == null)
+            return Json(new { success = false, message = "Please log in first" });
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddToFavorite(int productId)
-        {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
-            {
-                return Json(new { success = false, message = "Please log in first" });
-            }
+        var added = await _favoriteRepo.AddToFavoriteAsync(user.Id, productId);
 
-            var exists = await _context.Favorites
-                .AnyAsync(f => f.ProductId == productId && f.UserId == user.Id);
-
-            if (!exists)
-            {
-                _context.Favorites.Add(new Favorite
-                {
-                    ProductId = productId,
-                    UserId = user.Id
-                });
-                await _context.SaveChangesAsync();
-            }
-
+        if (added)
             return Json(new { success = true, message = "Added to favorites successfully" });
-        }
 
-        public async Task<IActionResult> ShowFavorites()
-        {
-            var user = await _userManager.GetUserAsync(User);
-            var favorites = await _context.Favorites
-                .Include(f => f.Product)
-                .Where(f => f.UserId == user.Id)
-                .Select(f => f.Product)
-                .ToListAsync();
+        return Json(new { success = false, message = "Already in favorites" });
+    }
 
-            return View(favorites);
-        }
+    public async Task<IActionResult> ShowFavorites()
+    {
+        var user = await _userManager.GetUserAsync(User);
+        var favorites = await _favoriteRepo.GetFavoritesAsync(user.Id);
+        return View(favorites);
+    }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> RemoveFavorite(int productId)
-        {
-            var user = await _userManager.GetUserAsync(User);
-            var favorite = await _context.Favorites
-                .FirstOrDefaultAsync(f => f.ProductId == productId && f.UserId == user.Id);
-
-            if (favorite != null)
-            {
-                _context.Favorites.Remove(favorite);
-                await _context.SaveChangesAsync();
-            }
-
-            return RedirectToAction(nameof(ShowFavorites));
-        }
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> RemoveFavorite(int productId)
+    {
+        var user = await _userManager.GetUserAsync(User);
+        await _favoriteRepo.RemoveFavoriteAsync(user.Id, productId);
+        return RedirectToAction(nameof(ShowFavorites));
     }
 }

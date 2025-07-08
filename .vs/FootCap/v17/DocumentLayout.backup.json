@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "D:\\Programming\\project Iti\\FootCap\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|d:\\programming\\project iti\\footcap\\footcap\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|solutionrelative:footcap\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|d:\\programming\\project iti\\footcap\\footcap\\controllers\\prodccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|solutionrelative:footcap\\controllers\\prodccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|d:\\programming\\project iti\\footcap\\footcap\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|solutionrelative:footcap\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|d:\\programming\\project iti\\footcap\\footcap\\servec\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|solutionrelative:footcap\\servec\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|d:\\programming\\project iti\\footcap\\footcap\\views\\admin\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|solutionrelative:footcap\\views\\admin\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|d:\\programming\\project iti\\footcap\\footcap\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|solutionrelative:footcap\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|d:\\programming\\project iti\\footcap\\footcap\\viewmodel\\userwithrolesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|solutionrelative:footcap\\viewmodel\\userwithrolesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|d:\\programming\\project iti\\footcap\\footcap\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|solutionrelative:footcap\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|d:\\programming\\project iti\\footcap\\footcap\\servec\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A6EFB5D-BE71-4C22-B1CD-38835306C444}|FootCap\\FootCap.csproj|solutionrelative:footcap\\servec\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,66 +39,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Orders.cshtml",
-              "DocumentMoniker": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Views\\Admin\\Orders.cshtml",
-              "RelativeDocumentMoniker": "FootCap\\Views\\Admin\\Orders.cshtml",
-              "ToolTip": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Views\\Admin\\Orders.cshtml",
-              "RelativeToolTip": "FootCap\\Views\\Admin\\Orders.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEoAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T14:30:24.279Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Program.cs",
+              "RelativeDocumentMoniker": "FootCap\\Program.cs",
+              "ToolTip": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Program.cs",
+              "RelativeToolTip": "FootCap\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T10:53:09.508Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserWithRolesViewModel.cs",
-              "DocumentMoniker": "D:\\Programming\\project Iti\\FootCap\\FootCap\\ViewModel\\UserWithRolesViewModel.cs",
-              "RelativeDocumentMoniker": "FootCap\\ViewModel\\UserWithRolesViewModel.cs",
-              "ToolTip": "D:\\Programming\\project Iti\\FootCap\\FootCap\\ViewModel\\UserWithRolesViewModel.cs",
-              "RelativeToolTip": "FootCap\\ViewModel\\UserWithRolesViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Servec\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "FootCap\\Servec\\ProductRepository.cs",
+              "ToolTip": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Servec\\ProductRepository.cs",
+              "RelativeToolTip": "FootCap\\Servec\\ProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T14:28:17.88Z",
+              "WhenOpened": "2025-07-08T10:52:55.157Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Users.cshtml",
-              "DocumentMoniker": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Views\\Admin\\Users.cshtml",
-              "RelativeDocumentMoniker": "FootCap\\Views\\Admin\\Users.cshtml",
-              "ToolTip": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Views\\Admin\\Users.cshtml",
-              "RelativeToolTip": "FootCap\\Views\\Admin\\Users.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAcwDMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T14:25:43.569Z",
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Servec\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "FootCap\\Servec\\IProductRepository.cs",
+              "ToolTip": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Servec\\IProductRepository.cs",
+              "RelativeToolTip": "FootCap\\Servec\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T10:52:34.875Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AdminDashboard.cshtml",
-              "DocumentMoniker": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Views\\Admin\\AdminDashboard.cshtml",
-              "RelativeDocumentMoniker": "FootCap\\Views\\Admin\\AdminDashboard.cshtml",
-              "ToolTip": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Views\\Admin\\AdminDashboard.cshtml",
-              "RelativeToolTip": "FootCap\\Views\\Admin\\AdminDashboard.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-07T14:24:18.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "FootCap\\Controllers\\AdminController.cs",
-              "ToolTip": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "FootCap\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAQwHIAAAAAAAAAAAAAAA==",
+              "Title": "ProdcController.cs",
+              "DocumentMoniker": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Controllers\\ProdcController.cs",
+              "RelativeDocumentMoniker": "FootCap\\Controllers\\ProdcController.cs",
+              "ToolTip": "D:\\Programming\\project Iti\\FootCap\\FootCap\\Controllers\\ProdcController.cs",
+              "RelativeToolTip": "FootCap\\Controllers\\ProdcController.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAgwLIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T14:23:44.396Z",
+              "WhenOpened": "2025-07-08T10:52:11.394Z",
               "EditorCaption": ""
             }
           ]

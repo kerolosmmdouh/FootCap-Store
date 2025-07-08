@@ -4,32 +4,32 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using System;
-using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using System.Linq;
 
 namespace FootCap.Controllers
 {
     [Authorize]
     public class ProdcController : Controller
     {
+        private readonly IProductRepository _productRepo;
         private readonly Context _context;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProdcController(Context context, IWebHostEnvironment webHostEnvironment)
+        public ProdcController(IProductRepository productRepo, Context context, IWebHostEnvironment webHostEnvironment)
         {
+            _productRepo = productRepo;
             _context = context;
             _webHostEnvironment = webHostEnvironment;
         }
 
-        // GET: Add Product
         public IActionResult Add()
         {
             ViewBag.Categories = new SelectList(_context.Categories.ToList(), "CategoryId", "Name");
             return View();
         }
 
-        // POST: Add Product
         [HttpPost]
         public async Task<IActionResult> Add(Product product)
         {
@@ -59,8 +59,7 @@ namespace FootCap.Controllers
 
                 try
                 {
-                    _context.Products.Add(product);
-                    await _context.SaveChangesAsync();
+                    await _productRepo.AddAsync(product);
                     return RedirectToAction("Index");
                 }
                 catch (Exception ex)
@@ -73,10 +72,9 @@ namespace FootCap.Controllers
             return View(product);
         }
 
-        // GET: Edit Product
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            var product = _context.Products.Find(id);
+            var product = await _productRepo.GetByIdAsync(id);
             if (product == null)
                 return NotFound();
 
@@ -84,7 +82,6 @@ namespace FootCap.Controllers
             return View(product);
         }
 
-        // POST: Edit Product
         [HttpPost]
         public async Task<IActionResult> Edit(Product product)
         {
@@ -94,17 +91,14 @@ namespace FootCap.Controllers
 
             if (ModelState.IsValid)
             {
-                var oldProduct = await _context.Products.AsNoTracking().FirstOrDefaultAsync(p => p.ProductId == product.ProductId);
+                var oldProduct = await _productRepo.GetByIdAsync(product.ProductId);
                 if (oldProduct == null)
                     return NotFound();
 
-                // تعيين الصورة القديمة كافتراضية
                 string imageUrl = oldProduct.ImageUrl;
 
-                // لو رفع صورة جديدة
                 if (product.ImageFile != null && product.ImageFile.Length > 0)
                 {
-                    // حذف الصورة القديمة إذا مش افتراضية
                     if (!string.IsNullOrEmpty(oldProduct.ImageUrl) && !oldProduct.ImageUrl.Contains("default-product.png"))
                     {
                         string oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, oldProduct.ImageUrl.TrimStart('/'));
@@ -114,7 +108,6 @@ namespace FootCap.Controllers
                         }
                     }
 
-                    // حفظ الصورة الجديدة
                     string wwwRootPath = _webHostEnvironment.WebRootPath;
                     string fileName = Path.GetFileNameWithoutExtension(product.ImageFile.FileName);
                     string extension = Path.GetExtension(product.ImageFile.FileName);
@@ -131,8 +124,7 @@ namespace FootCap.Controllers
 
                 product.ImageUrl = imageUrl;
 
-                _context.Products.Update(product);
-                await _context.SaveChangesAsync();
+                await _productRepo.UpdateAsync(product);
                 return RedirectToAction("Index");
             }
 
@@ -140,35 +132,28 @@ namespace FootCap.Controllers
             return View(product);
         }
 
-        // GET: List Products
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var products = _context.Products.Include(p => p.Category).ToList();
+            var products = await _productRepo.GetAllAsync();
             return View(products);
         }
 
-        // GET: Confirm Delete
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var product = _context.Products
-                .Include(p => p.Category)
-                .FirstOrDefault(p => p.ProductId == id);
-
+            var product = await _productRepo.GetByIdAsync(id);
             if (product == null)
                 return NotFound();
 
             return View(product);
         }
 
-        // POST: Delete Product
         [HttpPost]
-        public IActionResult DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var product = _context.Products.Find(id);
+            var product = await _productRepo.GetByIdAsync(id);
 
             if (product != null)
             {
-                // حذف صورة المنتج من السيرفر إذا ليست الصورة الافتراضية
                 if (!string.IsNullOrEmpty(product.ImageUrl) && !product.ImageUrl.Contains("default-product.png"))
                 {
                     var imagePath = Path.Combine(_webHostEnvironment.WebRootPath, product.ImageUrl.TrimStart('/'));
@@ -178,19 +163,16 @@ namespace FootCap.Controllers
                     }
                 }
 
-                _context.Products.Remove(product);
-                _context.SaveChanges();
+                await _productRepo.DeleteAsync(id);
             }
 
             return RedirectToAction("Index");
         }
 
-        public IActionResult showUser()
+        public async Task<IActionResult> showUser()
         {
-            var products = _context.Products.Include(p => p.Category).ToList();
+            var products = await _productRepo.GetAllAsync();
             return View(products);
         }
-
-     
     }
 }
